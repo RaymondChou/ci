@@ -1,0 +1,9 @@
+*~
+*.swap
+application/cache
+application/logs
+application/config/database.php
+
+.project
+.settings
+nbproject
