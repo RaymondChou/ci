@@ -358,5 +358,18 @@ $config['rewrite_short_tags'] = FALSE;
 $config['proxy_ips'] = '';
 
 
+function ci()
+{
+	return get_instance();
+}
+
+spl_autoload_register('my_custom_core_autoloader');
+function my_custom_core_autoloader($class) 
+{
+	$filename = APPPATH.'core/'.$class.EXT;
+	
+	if (file_exists($filename)) require_once $filename;
+}
+
 /* End of file config.php */
 /* Location: ./application/config/config.php */
