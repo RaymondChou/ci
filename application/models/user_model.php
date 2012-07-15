@@ -37,25 +37,31 @@ class User_model extends MY_Model {
 class User {
 	
 	const MEMBER = 1;
-	const ADMINISTRATOR = 2;
-	const SUPER_ADMIN = 4;
+	const EDITOR = 2;
+	const ADMINISTRATOR = 4;
+	const SUPER_ADMIN = 8;
 	
 	const STATUS_ACTIVE = 1;
 	const STATUS_LOCKED = 2;
 	
 	function has_role($role)
 	{
-		return (bool) ($this->role & $role); 
-	}
-	
-	function is_administrator()
-	{
-		return $this->has_role(self::ADMINISTRATOR);
+		return (bool) ($this->roles & $role); 
 	}
 	
 	function is_member()
 	{
 		return $this->has_role(self::MEMBER);
+	}
+	
+	function is_editor()
+	{
+		return $this->has_role(self::EDITOR);
+	}
+	
+	function is_administrator()
+	{
+		return $this->has_role(self::ADMINISTRATOR);
 	}
 	
 	function is_owner_of($object, $key = 'user_id')

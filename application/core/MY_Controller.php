@@ -61,9 +61,18 @@ class MY_Controller extends CI_Controller {
 	function require_administrator()
 	{
 		$this->require_authentication();
-		if ($this->auth->is_administrator()) return;
+		if ($this->auth->current_user()->is_administrator()) return;
 		
 		flash_error('Area is restricted to administrators only.');
+		redirect('home');
+	}
+	
+	function require_editor()
+	{
+		$this->require_authentication();
+		if ($this->auth->current_user()->is_editor()) return;
+		
+		flash_error('Area is restricted to editors only.');
 		redirect('home');
 	}
 	

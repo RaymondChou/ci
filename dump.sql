@@ -16,6 +16,35 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `posts`
+--
+
+DROP TABLE IF EXISTS `posts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `posts` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) CHARACTER SET latin1 NOT NULL,
+  `content` text CHARACTER SET latin1,
+  `user_id` int(10) unsigned DEFAULT NULL,
+  `status` tinyint(3) unsigned DEFAULT '0',
+  `created_at` int(10) unsigned DEFAULT NULL,
+  `published_at` int(10) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `posts`
+--
+
+LOCK TABLES `posts` WRITE;
+/*!40000 ALTER TABLE `posts` DISABLE KEYS */;
+INSERT INTO `posts` VALUES (2,'Hello World','This is my first post.',1,2,1342361379,1342361379);
+/*!40000 ALTER TABLE `posts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `users`
 --
 
@@ -24,14 +53,14 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `username` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `password` char(40) DEFAULT NULL,
-  `salt` char(40) DEFAULT NULL,
+  `username` varchar(255) CHARACTER SET latin1 DEFAULT NULL,
+  `email` varchar(255) CHARACTER SET latin1 DEFAULT NULL,
+  `password` char(40) CHARACTER SET latin1 DEFAULT NULL,
+  `salt` char(40) CHARACTER SET latin1 DEFAULT NULL,
   `roles` int(10) unsigned DEFAULT NULL,
-  `remember_me_token` char(40) DEFAULT NULL,
+  `remember_me_token` char(40) CHARACTER SET latin1 DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +69,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'filip','filip@example.com','b1f8d1ce335ba3f8afa68db997834e99dcd87c15','033ae433db8929feb90a9f5212756cfcadecddb6',NULL,NULL);
+INSERT INTO `users` VALUES (1,'filip','filip@example.com','b1f8d1ce335ba3f8afa68db997834e99dcd87c15','033ae433db8929feb90a9f5212756cfcadecddb6',6,NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +82,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-07-15  4:15:00
+-- Dump completed on 2012-07-15 16:10:05
