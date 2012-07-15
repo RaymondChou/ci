@@ -8,6 +8,8 @@
 		<?php echo $this->assets->render_scripts('head'); ?>
 	</head>
 	<body>
+		<?php render_flash_data(); ?>
+	
 		<?php echo $template['body']; ?>
 		
 		<?php echo $this->assets->render_scripts(); ?>

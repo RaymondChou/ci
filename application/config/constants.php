@@ -37,5 +37,21 @@ define('FOPEN_WRITE_CREATE_STRICT',				'xb');
 define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 
 
+define('PROJECT_DIR', realpath(dirname(SELF)).DIRECTORY_SEPARATOR);
+
+define('MINUTE', 60);
+define('MINUTES', MINUTE);
+define('HOUR', 60 * MINUTES);
+define('HOURS', HOUR);
+define('DAY', 24 * HOURS);
+define('DAYS', DAY);
+define('WEEK', 7 * DAY);
+define('WEEKS', WEEK);
+define('MONTH', 30 * DAYS);
+define('MONTHS', MONTH);
+define('YEAR', 12 * MONTH);
+define('YEARS', YEAR);
+
+
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */

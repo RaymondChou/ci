@@ -15,7 +15,7 @@ function render_flash_data()
 		if (ci()->session->flashdata($type))
 		{
 			?>
-				<div class="alert alert-<?php echo $type; ?>">
+				<div class="<?php echo $type; ?>">
 					<?php echo ci()->session->flashdata($type); ?> 
 				</div>
 			<?php

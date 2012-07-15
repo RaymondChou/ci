@@ -7,3 +7,4 @@ application/config/database.php
 .project
 .settings
 nbproject
+.buildpath

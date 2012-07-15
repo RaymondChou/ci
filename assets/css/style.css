@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.clear {
+	clear: both;
+	font-size: 0px;
+	line-height: 0px;
+}
+.error {
+	color: #900;
+}
+.success {
+	color: #090;
+}
+.warning {
+	color: yellow;
+}
+.info {
+	color: #009;
+}

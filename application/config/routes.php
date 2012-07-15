@@ -41,6 +41,10 @@
 $route['default_controller'] = "posts";
 $route['404_override'] = '';
 
+$route['signin'] = 'sessions/create';
+$route['signup'] = 'users/create';
+$route['signout'] = 'sessions/destroy';
+
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
