@@ -8,7 +8,7 @@ Released for free under a Creative Commons Attribution 2.5 License
 body {
 	margin: 0;
 	padding: 0;
-	background: #00340B url(images/img01.jpg) repeat-x left top;
+	background: #00340B url(../images/img01.jpg) repeat-x left top;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	color: #FFFFFF;
@@ -68,7 +68,7 @@ img.aligncenter {
 }
 
 #wrapper {
-	background: url(images/img02.jpg) no-repeat center top;
+	background: url(../images/img02.jpg) no-repeat center top;
 }
 
 /* Header */
@@ -176,11 +176,11 @@ img.aligncenter {
 }
 
 #menu li.current_page_item {
-	background: url(images/img09.jpg) no-repeat left top;
+	background: url(../images/img09.jpg) no-repeat left top;
 }
 
 #menu .current_page_item a {
-	background: url(images/img10.jpg) no-repeat right top;
+	background: url(../images/img10.jpg) no-repeat right top;
 }
 
 #menu a:hover {
@@ -219,7 +219,7 @@ img.aligncenter {
 	height: 45px;
 	margin: 0px;
 	padding: 10px 0px 0px 0px;
-	background: url(images/img04.gif) no-repeat right 15px;
+	background: url(../images/img04.gif) no-repeat right 15px;
 	text-decoration: none;
 	border: none;
 	color: #FFFFFF;
@@ -296,7 +296,7 @@ img.aligncenter {
 	height: 45px;
 	margin: 0px;
 	padding: 10px 0px 0px 20px;
-	background: url(images/img03.jpg) repeat-x left top;
+	background: url(../images/img03.jpg) repeat-x left top;
 	letter-spacing: -1px;
 	font-size: 28px;
 	color: #FFFFFF;
@@ -388,7 +388,7 @@ img.aligncenter {
 #three-columns li {
 	padding: 4px 0px 6px 15px;
 	border-bottom: 1px solid #003C0C;
-	background: url(images/img03.jpg) no-repeat left 15px;
+	background: url(../images/img03.jpg) no-repeat left 15px;
 }
 
 #three-columns h2 {
@@ -424,7 +424,7 @@ ul.style1 {
 	padding: 0px;
 	list-style: none;
 	line-height: normal;
-	background: url(images/img100.jpg) repeat left top;
+	background: url(../images/img100.jpg) repeat left top;
 }
 
 ul.style1 li {

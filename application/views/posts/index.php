@@ -1,17 +1,15 @@
 <?php if ($posts): ?>
-	<div class="posts">
 	<?php foreach ($posts as $post): ?>
-		<div class="post">
-			<h3><?php echo anchor($post->permalink(), $post->title); ?></h3>
-			<div class="content">
-				<?php echo $post->content; ?>
-			</div>
-			<div class="date">
-				Published: <?php echo time_since($post->published_at); ?>
-			</div>
+	<div class="post">
+		<h2 class="title"><a href="<?php echo $post->permalink(); ?>"><?php echo $post->title; ?> </a></h2>
+		<p class="meta">Posted by <a href="#">Someone</a> <?php echo time_since($post->published_at); ?>
+			&nbsp;&bull;&nbsp; <a href="#" class="comments">Comments (64)</a> &nbsp;&bull;&nbsp; 
+			<a href="<?php echo $post->permalink(); ?>" class="permalink">Full article</a></p>
+		<div class="entry">
+			<?php echo $post->content; ?>
 		</div>
-	<?php endforeach; ?>
 	</div>
+	<?php endforeach; ?>
 	<?php echo $pagination; ?>
 <?php else: ?>
 	<p>No Posts Yet!</p>
