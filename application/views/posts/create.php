@@ -15,7 +15,7 @@
 	<p>
 		<label>
 			<input type="hidden" name="status" value="1" />
-			<input type="checkbox" name="status" value="2" <?php echo set_checkbox('status', '1'); ?> /> Publish
+			<input type="checkbox" name="status" value="2" <?php echo set_checkbox('status', '2'); ?> /> Publish
 		</label>
 	</p>
 	
