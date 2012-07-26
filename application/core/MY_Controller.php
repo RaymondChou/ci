@@ -18,7 +18,10 @@ class MY_Controller extends CI_Controller {
 		$this->load->helper('application');
 		$this->load->spark('template/1.9.0');
 		
-		$this->assets->css('style.css');
+		$this->assets
+                ->css('style.css')
+                ->js('init.js')
+                ->js('jquery-1.7.2.js');
 		
 		$this->template->title(self::SITE_TITLE);
 		

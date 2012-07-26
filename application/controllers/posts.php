@@ -63,6 +63,7 @@ class Posts extends MY_Controller {
 	{
 		$post = $this->post_model->published()->get_object_or_404(array('id' => $post_id));
 		$this->set_title($post->title);
+        $this->assets->js('posts/show.js');
 		$this->template->build('posts/show', array(
 			'post' => $post,	
 		));
