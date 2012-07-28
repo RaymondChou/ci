@@ -67,7 +67,7 @@ class MY_Controller extends CI_Controller {
 		if ($this->auth->current_user()->is_administrator()) return;
 		
 		flash_error('Area is restricted to administrators only.');
-		redirect('home');
+		redirect('/');
 	}
 	
 	function require_editor()
@@ -76,7 +76,7 @@ class MY_Controller extends CI_Controller {
 		if ($this->auth->current_user()->is_editor()) return;
 		
 		flash_error('Area is restricted to editors only.');
-		redirect('home');
+		redirect('/');
 	}
 	
 	function require_ownership_of($object, $related_with = 'user_id')
