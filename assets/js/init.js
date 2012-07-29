@@ -13,6 +13,10 @@ CI.base_url = function(path) {
 CI.site_url = function(path) {
     var prefix = this.index_file ? this.index_file + '/' : '';
     return this.base_url(prefix + path);
-}
+};
+
+CI.redirect = function(path) {
+	window.location.href = this.site_url(path);
+};
 
 CI.STATUS_SUCCESS = 1;
